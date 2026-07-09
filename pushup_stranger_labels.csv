@@ -1,0 +1,12 @@
+clip,category,view,reps,label_source,segment,notes
+hIkeJVV-Djk,fast,side,76,onscreen counter reads 76 at 00:00; trace 84 naive - 8 intro/outro spurious = 76,7-64,world-record pace 1-min set; static cam white studio; barefoot
+RC_nkWWV0NU,clean_long,side,100,title claims 100; trace ~100 after trimming ends; VERIFY by watching,2-190,dim attic room on mat; vertical video; ends kneeling; amplitude shrinks late-set (fatigue)
+xoCKHx8Yyj4,clean_long,45,100,title claims 100; trace ~100-103 after end-noise trim; VERIFY by watching,3-153,carpet living room; static cam; sits and talks after set
+9MBgbodCaaQ,failure,side,10,title says last 10; trace shows 10 deep bottoms then shallow struggle-partials,0-50,drops to knees at true failure ~51s; partials 50-58 are the fatigue-boundary data
+BcEzywmVv0E,failure,side,69,trace estimate 79 naive - ~10 intro/outro; VERIFY by watching,12-130,military push-ups to failure; gym; caption overlays; rep duration lengthens visibly
+__71lgdtiB8,knees,45,10,trace 10 deep dips in demo segment; VERIFY by watching,35-86,modified knee push-up demo on mat; flat title-card freeze 0-27s (det 0.81)
+zsJDXwa5atE,knees,side,3,trace 3 demo reps; VERIFY by watching,20-43,eHow demo; logo-card cuts at both ends; weakest keeper
+lcN5Iic2F-w,negative_burpee,side,0,negative must count 0 as push-ups,,~6 burpees in 31s; gym; single subject
+zcLETpKUNaI,negative_burpee,side,0,negative must count 0 as push-ups,,~28 burpees 1 min; timer overlay; textbook periodic trace
+pvIjsG5Svck,negative_plank,side,0,negative must count 0,,studio plank hold; near-flat trace; disclaimer card at end
+pSHjTRCQxIw,negative_plank,side,0,negative must count 0; PROTOCOL-VIOLATING (cuts) - garbage-input stressor,,plank tutorial with camera cuts; failing toward zero is the requirement
