@@ -33,6 +33,8 @@ MIN_OBSERVED = 0.7  # min trusted-frame fraction across a rep's DOWN phase —
 # no XP for reps the camera didn't cleanly see (folded/occluded/garbage tracking)
 MAX_DWELL = 6.0  # max seconds between first and last deep frame of one rep —
 # a paused rep holds ~2-3s; camping at the bottom (tying shoes) is not a rep
+MAX_DEPTH = 0.9  # a hip a full leg-length below standing is not a squat —
+# deepest legit corpus rep is 0.80; beyond this is tracking garbage
 
 
 def load(csv_path):
@@ -162,7 +164,11 @@ def count(t, xyzv, a=None, b=None):
                     rep_ok = False  # folded over at the bottom
             if ratio < a:
                 state = "UP"
-                if rep_ok and down_seen >= MIN_OBSERVED * down_total:
+                if (
+                    rep_ok
+                    and rep_min_ratio <= MAX_DEPTH
+                    and down_seen >= MIN_OBSERVED * down_total
+                ):
                     reps.append((rep_min_t, rep_min_ratio))
     return reps
 
