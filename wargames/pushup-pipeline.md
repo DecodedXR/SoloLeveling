@@ -45,16 +45,22 @@ in the kill-test codebase.
 
 ## Battle plan
 
-### Step 0 `[HUMAN]` — Corpus (~1 evening, AFTER R2 scout passes)
-Matrix mirrors ENG §5: views side + 45° (front view is near-useless prone —
-include 3 front clips only to *prove* it fails, informing the app's prescribed
-setup); qualities clean ×5, shallow ×5, paused-at-bottom, fast, knees-down ×3,
-one set to failure; conditions: light/dim, mat/floor. Negatives (must count
-0): plank hold 60s, downward-dog/stretching, crawling into frame, burpees
-(descent without press pattern), lying down and getting up. Labels CSV same
-schema as squats.
-- **Expected observation:** ≥28 clips + labels on desktop.
+### Step 0 `[HUMAN]` — Corpus (~half evening, AFTER R2 scout passes)
+**AMENDED 2026-07-09:** the screened stranger supplement
+(`wargames/output/pushup-stranger-supplement.md`, 11 clips) pre-funds the
+cells the internet can provide — clean long sets ×2, fast ×1 (exact counter
+GT), failure ×2, knees ×2, negatives ×4 (burpee ×2, plank ×2). Strangers stay
+**held out** from tuning (transfer-check role, as in squats). Self-record only
+the irreplaceable ~13 protocol clips: shallow ×5 (side + one 45°, light/dim
+spread), clean-with-2s-plank-calibration ×2 (side, 45°), paused-at-bottom ×1,
+front ×3 (prove it fails), negatives ×2 (crawl into frame; lie down & get up).
+Labels CSV same schema as squats.
+- **Expected observation:** 13 protocol clips + labels on desktop; stranger
+  VERIFY flags (4 clips) resolved by watching.
 - **Counter-move:** missing matrix cell → record before Step 2 tunes.
+  Calibration or normalization fails to transfer between protocol and
+  stranger geometry → that is a Step 3 finding, not a reason to tune on
+  strangers.
 
 ### Step 1 — Extend harness
 Add shoulder/elbow/wrist signal extraction + plank calibration to the
@@ -72,9 +78,10 @@ left/right coherence adapted to arms). Hand-check rep timestamps on 3 clips.
   a time/velocity term (forbidden).
 
 ### Step 3 — Tune & cross-validate
-Grid-search A/B on side-view good-light; freeze; evaluate held-out
-conditions. Same targets as squats: ≥95% recall good-faith, ≥90% shallow
-rejection, **0** negative counts.
+Grid-search A/B on side-view good-light **protocol clips only**; freeze;
+evaluate held-out conditions AND the stranger supplement (frozen thresholds,
+no retune — the transfer check). Same targets as squats: ≥95% recall
+good-faith, ≥90% shallow rejection, **0** negative counts.
 - **Expected observation:** targets met on held-out conditions.
 - **Counter-move:** fatigue-set failures → lower B (policy, not code);
   45°-only failures → prescribe side view in-app (fork F1, condition ≥80%
