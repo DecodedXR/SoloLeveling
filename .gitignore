@@ -8,3 +8,4 @@ stranger_out/
 *.zip
 *.MOV
 *.task
+.build/

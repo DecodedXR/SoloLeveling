@@ -30,7 +30,8 @@ final class VerifierParityTests: XCTestCase {
     static func loadCSV(_ url: URL) throws -> [PoseFrame] {
         let text = try String(contentsOf: url, encoding: .utf8)
         var frames: [PoseFrame] = []
-        for line in text.split(separator: "\n").dropFirst() {
+        // CRLF is ONE grapheme in Swift — split(separator: "\n") never matches it
+        for line in text.split(whereSeparator: \.isNewline).dropFirst() {
             let parts = line.split(separator: ",", omittingEmptySubsequences: false)
             guard parts.count == 133 else { continue }
             let nums = parts.map { Double($0) ?? .nan }
