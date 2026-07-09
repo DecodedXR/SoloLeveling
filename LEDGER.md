@@ -18,6 +18,7 @@ execute blind.
 | 10 | 2026-07-09 | `wargames/beta-measurement.md` | fable-5 | TBD | 8/8 | GATED | HARD GATE R0: v1 build WIN. Answers Q1–Q4 (bands, verification-vs-retention A/B, false-reject rate, conversion); 4-week frozen window; honor arm is beta-only |
 | 11 | 2026-07-09 | `wargames/launch.md` | fable-5 | TBD | 8/8 | GATED | HARD GATE R0: build + beta WIN w/ go. Name memo (human/legal signs), fresh trend/collision checks, 30-day content calendar, review playbook; F1 pivots hook if trend post-peak |
 | 12 | 2026-07-09 | `wargames/vision-backend-parity.md` | fable-5 | TBD | 8/8 | GATED | Emerged from run #6: kill test tunes on MediaPipe, production runs Apple Vision — ADR R5's byte-match can't catch signal drift. Frozen-threshold replay on Vision CSVs; F1 = transfers-with-retune, F2 = ADR-1 reverses to MediaPipe. Gated on corpus + kill-test Steps 1–3 |
+| 13 | 2026-07-09 | `wargames/situp-pipeline.md` | fable-5 | TBD | 8/8 | GATED | Third exercise, first Pro (F17); completes the meme routine. HARD GATE R0: squat WIN + push-up row resolved. R2 supine one-clip scout is the kill gate; crunch depth-line policy (F3) is a mandatory human call with B/B′ data; V3 regresses squat+push-up corpora; V4 Vision replay if run #12 landed |
 
 **Outcome legend**
 - **WIN** — verification runs passed, objective met.
