@@ -1,0 +1,969 @@
+{
+ "frozen_thresholds": {
+  "A": 0.1,
+  "B": 0.375
+ },
+ "constants": {
+  "MIN_VIS": 0.5,
+  "TELEPORT_CAP": 0.08,
+  "ANKLE_DRIFT": 0.5,
+  "MIN_TORSO": 0.3,
+  "MIN_OBSERVED": 0.7,
+  "MAX_DWELL": 6.0,
+  "MAX_DEPTH": 0.9
+ },
+ "clips": {
+  "45_dim_clean": {
+   "calibration": {
+    "stand_hip": 0.410294,
+    "leg": 0.28938,
+    "shin": 0.14693,
+    "torso": 0.160388,
+    "window_end_frame": 137
+   },
+   "events": [
+    {
+     "t": 7.9,
+     "min_ratio": 0.516798
+    },
+    {
+     "t": 10.233,
+     "min_ratio": 0.538241
+    },
+    {
+     "t": 12.566,
+     "min_ratio": 0.533556
+    },
+    {
+     "t": 14.8,
+     "min_ratio": 0.488192
+    },
+    {
+     "t": 17.201,
+     "min_ratio": 0.593915
+    },
+    {
+     "t": 19.568,
+     "min_ratio": 0.570214
+    }
+   ]
+  },
+  "45_good_clean": {
+   "calibration": {
+    "stand_hip": 0.478582,
+    "leg": 0.315898,
+    "shin": 0.163241,
+    "torso": 0.161527,
+    "window_end_frame": 140
+   },
+   "events": [
+    {
+     "t": 6.6,
+     "min_ratio": 0.572383
+    },
+    {
+     "t": 9.133,
+     "min_ratio": 0.554526
+    },
+    {
+     "t": 11.466,
+     "min_ratio": 0.586134
+    },
+    {
+     "t": 14.233,
+     "min_ratio": 0.583641
+    },
+    {
+     "t": 16.868,
+     "min_ratio": 0.610733
+    },
+    {
+     "t": 19.768,
+     "min_ratio": 0.582774
+    },
+    {
+     "t": 22.468,
+     "min_ratio": 0.553979
+    }
+   ]
+  },
+  "45_good_shallow": {
+   "calibration": {
+    "stand_hip": 0.492211,
+    "leg": 0.301387,
+    "shin": 0.16396,
+    "torso": 0.161998,
+    "window_end_frame": 439
+   },
+   "events": []
+  },
+  "45_sweats_clean": {
+   "calibration": {
+    "stand_hip": 0.476139,
+    "leg": 0.281094,
+    "shin": 0.144013,
+    "torso": 0.176625,
+    "window_end_frame": 95
+   },
+   "events": [
+    {
+     "t": 5.0,
+     "min_ratio": 0.575648
+    },
+    {
+     "t": 7.266,
+     "min_ratio": 0.584581
+    },
+    {
+     "t": 9.233,
+     "min_ratio": 0.544237
+    },
+    {
+     "t": 11.566,
+     "min_ratio": 0.589813
+    },
+    {
+     "t": 13.966,
+     "min_ratio": 0.594035
+    },
+    {
+     "t": 16.168,
+     "min_ratio": 0.566618
+    }
+   ]
+  },
+  "front_dim_clean": {
+   "calibration": {
+    "stand_hip": 0.420999,
+    "leg": 0.286591,
+    "shin": 0.14659,
+    "torso": 0.174993,
+    "window_end_frame": 105
+   },
+   "events": [
+    {
+     "t": 4.466,
+     "min_ratio": 0.505275
+    },
+    {
+     "t": 6.366,
+     "min_ratio": 0.424812
+    },
+    {
+     "t": 8.333,
+     "min_ratio": 0.418731
+    },
+    {
+     "t": 10.4,
+     "min_ratio": 0.437132
+    },
+    {
+     "t": 12.333,
+     "min_ratio": 0.376158
+    }
+   ]
+  },
+  "front_dim_scroll": {
+   "calibration": {
+    "stand_hip": 0.306102,
+    "leg": 0.416819,
+    "shin": 0.22089,
+    "torso": 0.23987,
+    "window_end_frame": 975
+   },
+   "events": []
+  },
+  "front_dim_shallow": {
+   "calibration": {
+    "stand_hip": 0.425527,
+    "leg": 0.281699,
+    "shin": 0.135545,
+    "torso": 0.182253,
+    "window_end_frame": 488
+   },
+   "events": []
+  },
+  "front_dimsweats_clean": {
+   "calibration": {
+    "stand_hip": 0.464111,
+    "leg": 0.25755,
+    "shin": 0.126008,
+    "torso": 0.16325,
+    "window_end_frame": 111
+   },
+   "events": [
+    {
+     "t": 4.566,
+     "min_ratio": 0.464957
+    },
+    {
+     "t": 6.8,
+     "min_ratio": 0.499164
+    },
+    {
+     "t": 8.966,
+     "min_ratio": 0.528082
+    },
+    {
+     "t": 11.3,
+     "min_ratio": 0.575262
+    },
+    {
+     "t": 13.433,
+     "min_ratio": 0.428262
+    },
+    {
+     "t": 15.735,
+     "min_ratio": 0.547756
+    },
+    {
+     "t": 17.935,
+     "min_ratio": 0.465153
+    }
+   ]
+  },
+  "front_dimsweats_mixed": {
+   "calibration": {
+    "stand_hip": 0.451776,
+    "leg": 0.257058,
+    "shin": 0.126199,
+    "torso": 0.170142,
+    "window_end_frame": 182
+   },
+   "events": [
+    {
+     "t": 6.566,
+     "min_ratio": 0.524431
+    },
+    {
+     "t": 11.533,
+     "min_ratio": 0.588207
+    },
+    {
+     "t": 18.335,
+     "min_ratio": 0.681123
+    },
+    {
+     "t": 22.501,
+     "min_ratio": 0.555137
+    }
+   ]
+  },
+  "front_good_clean": {
+   "calibration": {
+    "stand_hip": 0.381488,
+    "leg": 0.313162,
+    "shin": 0.158341,
+    "torso": 0.186332,
+    "window_end_frame": 526
+   },
+   "events": [
+    {
+     "t": 4.766,
+     "min_ratio": 0.552054
+    },
+    {
+     "t": 7.133,
+     "min_ratio": 0.623576
+    },
+    {
+     "t": 9.766,
+     "min_ratio": 0.644158
+    },
+    {
+     "t": 12.333,
+     "min_ratio": 0.590942
+    },
+    {
+     "t": 15.2,
+     "min_ratio": 0.671401
+    }
+   ]
+  },
+  "front_good_fast": {
+   "calibration": {
+    "stand_hip": 0.406143,
+    "leg": 0.279224,
+    "shin": 0.140004,
+    "torso": 0.178195,
+    "window_end_frame": 181
+   },
+   "events": [
+    {
+     "t": 13.733,
+     "min_ratio": 0.614664
+    },
+    {
+     "t": 15.1,
+     "min_ratio": 0.607736
+    },
+    {
+     "t": 16.368,
+     "min_ratio": 0.659644
+    },
+    {
+     "t": 17.868,
+     "min_ratio": 0.597287
+    },
+    {
+     "t": 19.235,
+     "min_ratio": 0.536234
+    },
+    {
+     "t": 20.635,
+     "min_ratio": 0.645729
+    },
+    {
+     "t": 22.035,
+     "min_ratio": 0.601308
+    },
+    {
+     "t": 23.535,
+     "min_ratio": 0.625816
+    },
+    {
+     "t": 25.101,
+     "min_ratio": 0.602958
+    }
+   ]
+  },
+  "front_good_fatigue": {
+   "calibration": {
+    "stand_hip": 0.379063,
+    "leg": 0.309878,
+    "shin": 0.149684,
+    "torso": 0.190749,
+    "window_end_frame": 189
+   },
+   "events": [
+    {
+     "t": 7.133,
+     "min_ratio": 0.394458
+    },
+    {
+     "t": 9.3,
+     "min_ratio": 0.438724
+    },
+    {
+     "t": 11.6,
+     "min_ratio": 0.582344
+    },
+    {
+     "t": 13.466,
+     "min_ratio": 0.526752
+    },
+    {
+     "t": 15.466,
+     "min_ratio": 0.554666
+    },
+    {
+     "t": 17.668,
+     "min_ratio": 0.568465
+    },
+    {
+     "t": 19.668,
+     "min_ratio": 0.505189
+    },
+    {
+     "t": 21.701,
+     "min_ratio": 0.658874
+    },
+    {
+     "t": 23.968,
+     "min_ratio": 0.579368
+    },
+    {
+     "t": 25.935,
+     "min_ratio": 0.582957
+    },
+    {
+     "t": 28.001,
+     "min_ratio": 0.594086
+    },
+    {
+     "t": 30.235,
+     "min_ratio": 0.657674
+    },
+    {
+     "t": 32.935,
+     "min_ratio": 0.705575
+    },
+    {
+     "t": 35.168,
+     "min_ratio": 0.551837
+    },
+    {
+     "t": 37.568,
+     "min_ratio": 0.511488
+    },
+    {
+     "t": 39.768,
+     "min_ratio": 0.529998
+    },
+    {
+     "t": 41.768,
+     "min_ratio": 0.454041
+    },
+    {
+     "t": 43.901,
+     "min_ratio": 0.398608
+    },
+    {
+     "t": 46.035,
+     "min_ratio": 0.502861
+    },
+    {
+     "t": 48.17,
+     "min_ratio": 0.665734
+    },
+    {
+     "t": 50.303,
+     "min_ratio": 0.559405
+    },
+    {
+     "t": 52.37,
+     "min_ratio": 0.429578
+    },
+    {
+     "t": 54.636,
+     "min_ratio": 0.448721
+    },
+    {
+     "t": 56.803,
+     "min_ratio": 0.44292
+    },
+    {
+     "t": 58.903,
+     "min_ratio": 0.506301
+    },
+    {
+     "t": 60.803,
+     "min_ratio": 0.498881
+    },
+    {
+     "t": 62.936,
+     "min_ratio": 0.487155
+    },
+    {
+     "t": 65.003,
+     "min_ratio": 0.552921
+    },
+    {
+     "t": 67.07,
+     "min_ratio": 0.667177
+    },
+    {
+     "t": 69.036,
+     "min_ratio": 0.600349
+    },
+    {
+     "t": 70.903,
+     "min_ratio": 0.560284
+    },
+    {
+     "t": 72.936,
+     "min_ratio": 0.691708
+    },
+    {
+     "t": 75.036,
+     "min_ratio": 0.645928
+    },
+    {
+     "t": 77.07,
+     "min_ratio": 0.647761
+    },
+    {
+     "t": 78.97,
+     "min_ratio": 0.646731
+    },
+    {
+     "t": 80.938,
+     "min_ratio": 0.550789
+    },
+    {
+     "t": 82.805,
+     "min_ratio": 0.631879
+    },
+    {
+     "t": 84.705,
+     "min_ratio": 0.534122
+    },
+    {
+     "t": 86.538,
+     "min_ratio": 0.486843
+    },
+    {
+     "t": 88.371,
+     "min_ratio": 0.693805
+    },
+    {
+     "t": 90.371,
+     "min_ratio": 0.534873
+    },
+    {
+     "t": 92.205,
+     "min_ratio": 0.503134
+    },
+    {
+     "t": 94.071,
+     "min_ratio": 0.490088
+    },
+    {
+     "t": 95.905,
+     "min_ratio": 0.531073
+    },
+    {
+     "t": 97.738,
+     "min_ratio": 0.543189
+    },
+    {
+     "t": 99.471,
+     "min_ratio": 0.437376
+    },
+    {
+     "t": 101.205,
+     "min_ratio": 0.465172
+    },
+    {
+     "t": 103.105,
+     "min_ratio": 0.504599
+    },
+    {
+     "t": 104.938,
+     "min_ratio": 0.646706
+    }
+   ]
+  },
+  "front_good_mixed": {
+   "calibration": {
+    "stand_hip": 0.361142,
+    "leg": 0.329103,
+    "shin": 0.165867,
+    "torso": 0.195765,
+    "window_end_frame": 906
+   },
+   "events": [
+    {
+     "t": 5.9,
+     "min_ratio": 0.612964
+    },
+    {
+     "t": 11.833,
+     "min_ratio": 0.669759
+    },
+    {
+     "t": 17.435,
+     "min_ratio": 0.606161
+    },
+    {
+     "t": 23.668,
+     "min_ratio": 0.421609
+    },
+    {
+     "t": 27.135,
+     "min_ratio": 0.635866
+    }
+   ]
+  },
+  "front_good_paused": {
+   "calibration": {
+    "stand_hip": 0.486583,
+    "leg": 0.313489,
+    "shin": 0.163857,
+    "torso": 0.17061,
+    "window_end_frame": 96
+   },
+   "events": [
+    {
+     "t": 5.9,
+     "min_ratio": 0.557561
+    },
+    {
+     "t": 9.566,
+     "min_ratio": 0.802099
+    },
+    {
+     "t": 15.333,
+     "min_ratio": 0.717462
+    },
+    {
+     "t": 21.835,
+     "min_ratio": 0.65903
+    },
+    {
+     "t": 26.335,
+     "min_ratio": 0.615567
+    }
+   ]
+  },
+  "front_good_pickup": {
+   "calibration": {
+    "stand_hip": 0.441198,
+    "leg": 0.286579,
+    "shin": 0.150363,
+    "torso": 0.168846,
+    "window_end_frame": 539
+   },
+   "events": [
+    {
+     "t": 26.535,
+     "min_ratio": 0.727428
+    }
+   ]
+  },
+  "front_good_scroll": {
+   "calibration": {
+    "stand_hip": 0.414237,
+    "leg": 0.312867,
+    "shin": 0.164618,
+    "torso": 0.179442,
+    "window_end_frame": 186
+   },
+   "events": []
+  },
+  "front_good_shallow": {
+   "calibration": {
+    "stand_hip": 0.50275,
+    "leg": 0.30067,
+    "shin": 0.154219,
+    "torso": 0.167552,
+    "window_end_frame": 442
+   },
+   "events": []
+  },
+  "front_good_sitstand": {
+   "calibration": {
+    "stand_hip": 0.468419,
+    "leg": 0.263141,
+    "shin": 0.134037,
+    "torso": 0.154732,
+    "window_end_frame": 783
+   },
+   "events": [
+    {
+     "t": 5.5,
+     "min_ratio": 0.483122
+    },
+    {
+     "t": 9.466,
+     "min_ratio": 0.487487
+    },
+    {
+     "t": 14.5,
+     "min_ratio": 0.468636
+    },
+    {
+     "t": 17.101,
+     "min_ratio": 0.481333
+    },
+    {
+     "t": 19.635,
+     "min_ratio": 0.48992
+    },
+    {
+     "t": 23.468,
+     "min_ratio": 0.490591
+    },
+    {
+     "t": 27.268,
+     "min_ratio": 0.511083
+    }
+   ]
+  },
+  "front_good_tieshoes": {
+   "calibration": {
+    "stand_hip": 0.43114,
+    "leg": 0.294205,
+    "shin": 0.158968,
+    "torso": 0.182441,
+    "window_end_frame": 115
+   },
+   "events": []
+  },
+  "front_good_walkthrough": {
+   "calibration": {
+    "stand_hip": 0.486803,
+    "leg": 0.224736,
+    "shin": 0.116991,
+    "torso": 0.15118,
+    "window_end_frame": 337
+   },
+   "events": []
+  },
+  "front_sweats_clean": {
+   "calibration": {
+    "stand_hip": 0.476401,
+    "leg": 0.291811,
+    "shin": 0.148697,
+    "torso": 0.184064,
+    "window_end_frame": 271
+   },
+   "events": [
+    {
+     "t": 5.0,
+     "min_ratio": 0.498013
+    },
+    {
+     "t": 7.366,
+     "min_ratio": 0.488745
+    },
+    {
+     "t": 9.8,
+     "min_ratio": 0.482445
+    },
+    {
+     "t": 11.833,
+     "min_ratio": 0.521542
+    },
+    {
+     "t": 14.333,
+     "min_ratio": 0.45467
+    }
+   ]
+  },
+  "front_sweats_shallow": {
+   "calibration": {
+    "stand_hip": 0.481006,
+    "leg": 0.27126,
+    "shin": 0.136898,
+    "torso": 0.17419,
+    "window_end_frame": 100
+   },
+   "events": [
+    {
+     "t": 3.933,
+     "min_ratio": 0.388775
+    }
+   ]
+  },
+  "lunges_all_directions": {
+   "calibration": {
+    "stand_hip": 0.453881,
+    "leg": 0.268324,
+    "shin": 0.135405,
+    "torso": 0.167382,
+    "window_end_frame": 341
+   },
+   "events": []
+  },
+  "side_dim_clean": {
+   "calibration": {
+    "stand_hip": 0.429231,
+    "leg": 0.278047,
+    "shin": 0.144906,
+    "torso": 0.158066,
+    "window_end_frame": 102
+   },
+   "events": [
+    {
+     "t": 4.1,
+     "min_ratio": 0.542956
+    },
+    {
+     "t": 6.4,
+     "min_ratio": 0.551284
+    },
+    {
+     "t": 8.566,
+     "min_ratio": 0.52244
+    },
+    {
+     "t": 10.966,
+     "min_ratio": 0.514867
+    },
+    {
+     "t": 13.266,
+     "min_ratio": 0.523277
+    },
+    {
+     "t": 15.568,
+     "min_ratio": 0.543009
+    }
+   ]
+  },
+  "side_dim_shallow": {
+   "calibration": {
+    "stand_hip": 0.415659,
+    "leg": 0.28161,
+    "shin": 0.148721,
+    "torso": 0.171643,
+    "window_end_frame": 92
+   },
+   "events": []
+  },
+  "side_dimsweats_clean": {
+   "calibration": {
+    "stand_hip": 0.45794,
+    "leg": 0.258465,
+    "shin": 0.130531,
+    "torso": 0.162549,
+    "window_end_frame": 116
+   },
+   "events": [
+    {
+     "t": 4.633,
+     "min_ratio": 0.52944
+    },
+    {
+     "t": 6.8,
+     "min_ratio": 0.484381
+    },
+    {
+     "t": 9.033,
+     "min_ratio": 0.469696
+    },
+    {
+     "t": 11.4,
+     "min_ratio": 0.508676
+    },
+    {
+     "t": 13.866,
+     "min_ratio": 0.491328
+    },
+    {
+     "t": 16.335,
+     "min_ratio": 0.527419
+    }
+   ]
+  },
+  "side_good_clean": {
+   "calibration": {
+    "stand_hip": 0.475036,
+    "leg": 0.328455,
+    "shin": 0.176192,
+    "torso": 0.174341,
+    "window_end_frame": 660
+   },
+   "events": [
+    {
+     "t": 4.933,
+     "min_ratio": 0.613911
+    },
+    {
+     "t": 8.766,
+     "min_ratio": 0.588598
+    },
+    {
+     "t": 11.9,
+     "min_ratio": 0.616793
+    },
+    {
+     "t": 14.966,
+     "min_ratio": 0.544463
+    },
+    {
+     "t": 17.101,
+     "min_ratio": 0.564935
+    },
+    {
+     "t": 20.135,
+     "min_ratio": 0.555886
+    }
+   ]
+  },
+  "side_good_fast": {
+   "calibration": {
+    "stand_hip": 0.526489,
+    "leg": 0.286033,
+    "shin": 0.154858,
+    "torso": 0.156966,
+    "window_end_frame": 100
+   },
+   "events": [
+    {
+     "t": 4.7,
+     "min_ratio": 0.547716
+    },
+    {
+     "t": 5.9,
+     "min_ratio": 0.500679
+    },
+    {
+     "t": 7.133,
+     "min_ratio": 0.513498
+    },
+    {
+     "t": 8.366,
+     "min_ratio": 0.487735
+    },
+    {
+     "t": 9.533,
+     "min_ratio": 0.479658
+    },
+    {
+     "t": 10.733,
+     "min_ratio": 0.522496
+    },
+    {
+     "t": 11.966,
+     "min_ratio": 0.501898
+    },
+    {
+     "t": 13.2,
+     "min_ratio": 0.464664
+    }
+   ]
+  },
+  "side_good_hinge": {
+   "calibration": {
+    "stand_hip": 0.44484,
+    "leg": 0.279705,
+    "shin": 0.14512,
+    "torso": 0.154342,
+    "window_end_frame": 98
+   },
+   "events": []
+  },
+  "side_good_paused": {
+   "calibration": {
+    "stand_hip": 0.510561,
+    "leg": 0.271472,
+    "shin": 0.137055,
+    "torso": 0.151238,
+    "window_end_frame": 416
+   },
+   "events": [
+    {
+     "t": 7.933,
+     "min_ratio": 0.672397
+    },
+    {
+     "t": 11.933,
+     "min_ratio": 0.615664
+    },
+    {
+     "t": 16.968,
+     "min_ratio": 0.602234
+    },
+    {
+     "t": 21.801,
+     "min_ratio": 0.63978
+    },
+    {
+     "t": 26.568,
+     "min_ratio": 0.593124
+    }
+   ]
+  },
+  "side_good_shallow": {
+   "calibration": {
+    "stand_hip": 0.502797,
+    "leg": 0.29081,
+    "shin": 0.156487,
+    "torso": 0.160292,
+    "window_end_frame": 580
+   },
+   "events": []
+  },
+  "side_sweats_shallow": {
+   "calibration": {
+    "stand_hip": 0.463405,
+    "leg": 0.283593,
+    "shin": 0.147207,
+    "torso": 0.155505,
+    "window_end_frame": 95
+   },
+   "events": []
+  }
+ }
+}
