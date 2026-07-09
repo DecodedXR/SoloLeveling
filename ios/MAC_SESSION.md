@@ -78,6 +78,15 @@ git add -A && git commit -m "M0 walking skeleton: Xcode project + checks pass" &
 - Run `swift test` once more from a clean clone (V1-style sanity).
 - Start M1 GPS models ONLY if M0's check fully passed (B1: no milestone bleed).
 
+## After the Mac session (back on Windows)
+
+Record the 13 push-up Step 0 protocol clips (amended matrix in
+`wargames/pushup-pipeline.md`): every clip starts with a 2s plank hold
+(calibration), phone on floor, ~20s. Side/good: clean, shallow ×2,
+shallow-mixed, paused-bottom, crawl + lie-down negatives; side/dim: shallow;
+45°: clean + shallow; front ×3 (prove-it-fails). Plus the 4 VERIFY counts in
+`pushup_stranger_labels.csv` (~10 min). Steps 1–3 then run on Windows.
+
 ## Priority if the session shrinks
 
 1. Step 1 (parity) — closes the campaign's top technical risk, needs only CLT.
