@@ -9,3 +9,5 @@ stranger_out/
 *.MOV
 *.task
 .build/
+pushup_scout/
+pushup_out/
