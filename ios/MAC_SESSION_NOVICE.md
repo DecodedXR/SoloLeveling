@@ -23,12 +23,20 @@ zero Mac experience. Read Part A once; then work Parts B–E top to bottom.
 
 ## Part B — Prep you can do on Windows BEFORE the session (10 min, do it now)
 
-1. **Create a GitHub token** (you'll need it to push from the Mac, and to
-   clone if the repo is private): github.com → your avatar → Settings →
-   Developer settings → Personal access tokens → Tokens (classic) →
-   Generate new token (classic) → check the **repo** scope → generate.
-   **Copy it into your phone's notes** — you'll type it on the Mac as your
-   password when git asks.
+1. **Get a GitHub token** (you'll need it to push from the Mac, and to
+   clone if the repo is private). Two options:
+   - **Reuse the Windows one (fastest):** on the Windows PC run
+     `gh auth token` — it prints the token already backing the GitHub CLI
+     there (`repo` scope confirmed). Caveat: it's shared with the PC;
+     revoking it later logs the PC's `gh` out too.
+   - **Make a disposable one (cleanest):** github.com → avatar → Settings →
+     Developer settings → Personal access tokens → Tokens (classic) →
+     Generate new token (classic) → check the **repo** scope → expiration
+     7 days → generate. Revoke it after the session.
+
+   Either way: **copy it into your phone's notes** — on the Mac you'll type
+   it as your *password* when git asks (your real GitHub password will not
+   work). Never paste the token into any file in the repo.
 2. **Know your OneDrive login** (the purdue.edu one). The 32 landmark CSVs in
    `out/` are gitignored — OneDrive is how the Mac gets them.
 3. Repo URL: `https://github.com/DecodedXR/SoloLeveling.git` (already pushed).
@@ -69,13 +77,16 @@ Skip Step 2, still do Step 3.
 ```sh
 git config --global user.name  "DecodedXR"
 git config --global user.email "decodedpc@gmail.com"
+git config --global credential.helper osxkeychain
 cd ~
 git clone https://github.com/DecodedXR/SoloLeveling.git
 cd SoloLeveling
 ```
 
-If it asks for username/password: username = your GitHub username, password =
-**the token from Part B** (your real password will not work).
+If it asks for username/password: username = `DecodedXR`, password =
+**the token from Part B** (your real password will not work). The
+`osxkeychain` line stores it in the Mac's keychain after the first success,
+so you type it once, not on every push.
 
 ### C4. Get the `out/` CSVs onto the Mac
 
