@@ -37,8 +37,8 @@ zero Mac experience. Read Part A once; then work Parts B–E top to bottom.
    Either way: **copy it into your phone's notes** — on the Mac you'll type
    it as your *password* when git asks (your real GitHub password will not
    work). Never paste the token into any file in the repo.
-2. **Know your OneDrive login** (the purdue.edu one). The 32 landmark CSVs in
-   `out/` are gitignored — OneDrive is how the Mac gets them.
+2. ~~OneDrive~~ Not needed anymore: the 32 landmark CSVs now travel on the
+   `csv-transfer` git branch (see C4).
 3. Repo URL: `https://github.com/DecodedXR/SoloLeveling.git` (already pushed).
 
 ## Part C — One-time Mac setup
@@ -90,19 +90,18 @@ so you type it once, not on every push.
 
 ### C4. Get the `out/` CSVs onto the Mac
 
-Easiest on a borrowed Mac — the browser, no OneDrive app install:
-
-1. Safari → onedrive.com → sign in with the purdue.edu account.
-2. Navigate to `Documents → GitHub → SoloLeveling → out` → select all →
-   Download (arrives as a zip in `~/Downloads`).
-3. In Terminal:
+The CSVs live on a dedicated branch of the same repo — no OneDrive, no
+second login:
 
 ```sh
 cd ~/SoloLeveling
-mkdir -p out
-unzip -j ~/Downloads/out*.zip -d out/
+git fetch origin csv-transfer
+git checkout origin/csv-transfer -- out/
 ls out/*.csv | wc -l    # expect 32
 ```
+
+(This copies the CSVs into your working folder without switching branches;
+`git status` will show them as new files — ignore that, don't commit them.)
 
 ---
 

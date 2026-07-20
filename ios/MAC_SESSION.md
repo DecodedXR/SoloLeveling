@@ -7,9 +7,11 @@ time runs short.
 ## Before you sit down (on Windows, already done / verify)
 
 - [ ] Repo pushed to GitHub (`git push`) — the Mac pulls from there.
-- [ ] `out/` landmark CSVs available to the Mac. The repo folder lives in
-      OneDrive, so signing into OneDrive on the Mac ALSO works. Without them
-      the parity test skips (it needs the CSV inputs; they are gitignored).
+- [ ] `out/` landmark CSVs published on the `csv-transfer` branch (32 CSVs;
+      done — see wargames/mac-session-prep.md). On the Mac, after cloning:
+      `git fetch origin csv-transfer && git checkout origin/csv-transfer -- out/`
+      Then `ls out/*.csv | wc -l` must print 32. Without them the parity test
+      skips. (The repo is public — no token needed to fetch.)
 - [ ] This runbook + `fixtures/verifier_expected.json` committed.
 
 ## 0. Prereq check (5 min — do this FIRST)
