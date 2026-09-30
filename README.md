@@ -11,6 +11,16 @@ actually earned."*
 > collision-free vocabulary (hunter, rank, quest, gate, ascend) and never any
 > franchise-trademarked terms - that ban is a release gate, not a style note.
 
+## Try it
+
+Not on the App Store yet. To run it on your own iPhone you need a Mac with Xcode:
+
+1. `git clone https://github.com/DecodedXR/SoloLeveling`
+2. Open `ios/SoloApp` in Xcode, pick your iPhone as the run target, and press Run.
+3. Start a set, prop the phone up ~2 m away at hip height, and get your full body in frame. Reps only count once the setup check passes.
+
+See [Build & test](#build--test) for the command-line details.
+
 ---
 
 ## The idea
